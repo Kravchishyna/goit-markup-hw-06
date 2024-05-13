@@ -46,7 +46,7 @@
               </section>
 
                <!--=====benefits 2 section ======-->
-                 <section class="benefits hidden">
+                 <section class="benefits ">
                   <div class="container">
                     <h2 class="visually-hidden">our benefits</h2>
                     
@@ -94,7 +94,7 @@
                        
                          <ul class="avatar-list">
                           <li class="avatar">
-                            <img src="./images/mark-guerrero.jpg" alt="mark-guerrero avatar" width="264" height="260">
+                            <img srcset="./images/mark-mob@2x.jpg 2x" src="./images/mark-mob@1x.jpg" alt="mark-guerrero avatar" width="264" height="260">
                             <div class="container-avatar">
                           <h3 class="avatar-name">Mark Guerrero</h3>
                           <p class="avatar-goal">Product Designer</p>
@@ -106,7 +106,7 @@
                           </ul>
                             </div>
                        <li class="avatar">
-                        <img src="./images/tom-ford.jpg" alt="tom ford avatar" width="264" height="260">
+                        <img srcset="./images/taxi-mob@2x.jpg 2x" src="./images/tom-mob@1x.jpg" alt="tom ford avatar" width="264" height="260">
                         <div class="container-avatar">
                           <h3 class="avatar-name">Tom Ford</h3>
                           <p class="avatar-goal">Frontend Developer</p>
@@ -119,7 +119,7 @@
                         </div>
                         </li>
                         <li class="avatar">
-                          <img src="./images/camila-garcia.jpg" alt="camila garcia avatar" width="264" height="260">
+                          <img srcset="./images/camila-mob@2x.jpg 2x" src="./images/camila-mob@1x.jpg" alt="camila garcia avatar" width="264" height="260">
                         <div class="container-avatar">
                           <h3 class="avatar-name">Camila Garcia</h3>
                           <p class="avatar-goal">Marketing</p>
@@ -131,7 +131,7 @@
                          </ul> 
                           </div>
                         <li class="avatar"> 
-                          <img src="./images/daniel-wilson.jpg" alt="daniel wilson avatar" width="264" height="260">
+                          <img srcset="./images/deniel-mob@2x.jpg 2x" src="./images/deniel-mob@1x.jpg" alt="daniel wilson avatar" width="264" height="260">
                         <div class="container-avatar">
                           <h3 class="avatar-name">Daniel Wilson</h3>
                         <p class="avatar-goal">UI Designer</p>
@@ -155,7 +155,28 @@
                     <ul class="portfolio-list">
                         <li class="portfolio-list-item">
                           <div class="window">
-                            <img  class="portfolio-img" src="./images/banking-app.jpg" alt="banking app avatar" width="360" height="300">
+                            <picture>
+                              <source
+                              srcset="
+                              ./images/bank-desc@1x.jpg 1x,
+                              ./images/banking-app@2x.jpg 2x"
+                              media="(min-width: 1158px)"
+                              >
+                              <source
+                              srcset="
+                              ./images/bank-tab@1x.jpg 1x,
+                              ./images/bank-tab@2x.jpg 2x"
+                              media="(min-width:768px)"
+                               >
+                              <source
+                              srcset="
+                              ./images/bank-mob@1x.jpg 1x,
+                              ./images/bank-mob@2x.jpg 2x"
+                              media="(max-width: 767px)"
+                              >
+                              <img  class="portfolio-img" src="./images/banking-app.jpg" alt="banking app avatar" width="360" height="300">
+                            </picture>
+                            
                              <p class="window-text">
                               14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                              </p>
@@ -169,7 +190,28 @@
                      </li>
                      <li class="portfolio-list-item">
                       <div class="window">
-                        <img class="portfolio-img" src="./images/cashless-payment.jpg" alt="cashless payment avatar" width="360" height="300">
+                        <picture>
+                          <source 
+                          srcset="
+                          ./images/cashless-desc@1x.jpg 1x, 
+                          ./images/cashless-desc@2x.jpg 2x"
+                          media="(min-width: 1158px)"
+                          >
+                          <source
+                          srcset="
+                          ./images/cashless-tab@1x.jpg 1x,
+                          ./images/cashless-tab@2x.jpg 2x"
+                          media="(min-width:768px)"
+                          >
+                          <source
+                          srcset="
+                          ./images/cashless-mob@1x.jpg 1x,
+                          ./images/cashless-mob@2x.jpg 2x"
+                          media="(max-width: 767px)"
+                          >
+                          <img class="portfolio-img" src="./images/cashless-payment.jpg" alt="cashless payment avatar" width="360" height="300">
+                        </picture>
+                       
                         <p class="window-text">
                          14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                         </p>
@@ -182,7 +224,28 @@
                       </li>
                      <li class="portfolio-list-item">
                       <div class="window">
-                        <img class="portfolio-img" src="./images/meditation-app.jpg" alt="meditation app avatar" width="360" height="300">
+                        <picture>
+                          <source
+                          srcset="
+                          ./images/meditation-desc@1x.jpg 1x,
+                          ./images/meditation-desc@2x.jpg 2x"
+                          media="(min-width: 1158px)"
+                          >
+                          <source
+                          srcset="
+                          ./images/meditation-tab@1x.jpg 1x,
+                          ./images/meditation-tab@2x.jpg 2x"
+                          media="(min-width:768px)"
+                          >
+                          <source 
+                          srcset="
+                          ./images/meditation-mob@1x.jpg 1x,
+                          ./images/meditation-mob@2x.jpg 2x"
+                          media="(max-width: 767px)"
+                          >
+                          <img class="portfolio-img" src="./images/meditation-app.jpg" alt="meditation app avatar" width="360" height="300">
+                        </picture>
+                       
                         <p class="window-text">
                          14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                         </p>
@@ -195,7 +258,28 @@
                      </li>
                      <li class="portfolio-list-item">
                       <div class="window">
-                        <img class="portfolio-img" src="./images/taxi-service.jpg" alt="taxi service avatar" width="360" height="300">
+                        <picture>
+                          <source 
+                          srcset="
+                          ./images/taxi-desc@1x/jpg 1x,
+                          ./images/taxi-desc@2x/jpg 2x"
+                          media="(min-width: 1158px)"
+                          >
+                          <source
+                          srcset="
+                          ./images/taxi-tab@1x.jpg 1x,
+                          ./images/taxi-tab@2x.jpg 2x"
+                          media="(min-width:768px)"
+                          >
+                          <source
+                          srcset="
+                          ./images/taxi-mob@1x.jpg 1x,
+                          ./images/taxi-mob@2x.jpg 2x"
+                          media="(max-width: 767px)"
+                          >
+                          <img class="portfolio-img" src="./images/taxi-service.jpg" alt="taxi service avatar" width="360" height="300">
+                        </picture>
+                       
                         <p class="window-text">
                          14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                         </p>
@@ -204,11 +288,32 @@
                         <h3 class="portfolio-name">Taxi Service</h3>
                         <p class="portfolio-goal">Marketing</p>
                        </div>
-                       
+
                      </li>
                      <li class="portfolio-list-item">
                       <div class="window">
-                        <img class="portfolio-img" src="./images/screen-illustrations.jpg" alt="taxi service avatar" width="360" height="300">
+                        <picture>
+                          <source 
+                          srcset="
+                          ./images/courses-desc@1x.jpg 1x,
+                          ./images/courses-desc@2x.jpg 2x"
+                          media="(min-width: 1158px)"
+                          >
+                          <source 
+                          srcset="
+                          ./images/courses-tab@1x.jpg 1x,
+                          ./images/courses-tab@2x.jpg 2x"
+                          media="(min-width:768px)"
+                          >
+                          <source 
+                          srcset="
+                          ./images/courses-mob@1x.jpg 1x,
+                          ./images/courses-mob@2x.jpg 2x"
+                          media="(max-width: 767px)"
+                          >
+                          <img class="portfolio-img" src="./images/screen-illustrations.jpg" alt="taxi service avatar" width="360" height="300">
+                        </picture>
+                        
                         <p class="window-text">
                          14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                         </p>
@@ -216,8 +321,7 @@
                        <div class="container-portfolio">
                         <h3 class="portfolio-name">Screen Illustrations</h3>
                         <p class="portfolio-goal">Design</p>
-                       </div>
-                       
+                       </div>  
                      </li>
                      <li class="portfolio-list-item">
                       <div class="window">
@@ -237,7 +341,7 @@
                 </main> 
 
                             <!--=====footer======-->
-                  <footer class="section ">
+                  <footer class="section hidden">
                     <div class="container media-f">
                       <div class="footer-p">
                         <a class="logo-f" href="./index.html">Web<span class="logo-part-f">Studio</span></a>

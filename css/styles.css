@@ -23,9 +23,22 @@ ul, ol {
     padding: 0;
     margin: 0;
 }
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 
 .container {
     max-width: 320px;
+   min-height: 432px;
     padding: 0 16px;
     margin: 0 auto;
 }
@@ -177,7 +190,6 @@ ul, ol {
 /* =====hero===== */
 .title-section{
     background-color: #2e2f42;
-    max-width: 320px;
     margin-left: auto;
     margin-right: auto;
     padding: 72px 0;
@@ -185,8 +197,11 @@ ul, ol {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/dark-bg-mob-one.jpg),url(../images/dark-bg-mob-sec.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/dark-bg-mob@1x.jpg);
 }
+
+    
+
 .page-container {
     display: block;
     text-align: center;
@@ -197,8 +212,7 @@ ul, ol {
     line-height: 1.11;
     letter-spacing: 0.02em;
     color: #ffffff;
-    max-width: 216px;
-    margin: 0 auto 72px;
+   margin-bottom: 72px;
 }
 .button {
     font-family: "Roboto", sans-serif;
@@ -225,45 +239,55 @@ ul, ol {
 .button:focus {
     background-color: #404bbf;
 }
+@media screen and (max-width: 767px) and (min-resolution: 192dpi) {
+    .title-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/dark-bg-mob@2x.jpg);
+    }
+}
 @media screen and (min-width: 768px) {
     .page-title {  
         font-size: 56px;
         line-height: 1.07;
         margin: 0 auto 36px;
         max-width: 496px;
-    
         }
         .title-section {
             max-width: 768px; 
-            padding: 112px 0;
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/dark-tab@1x.jpg);
+            min-height: 436px;
         }      
+}
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+    .title-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/dark-tab@2x.jpg);
+    }
 }
 @media screen and (min-width: 1158px) {
     .title-section {
-        max-width: 1440px; 
+        background-color: #2e2f42;
+        max-width: 1440px;
+        min-height: 600px;
+        margin-left: auto;
+        margin-right: auto;
         padding: 188px 0;
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+        box-shadow: 0 2px 1px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office@1x.jpg);
     }
-    .page-title {
-        display: block;
-        max-width: 496px;
-        margin: 0 auto 48px;
+        .page-title {
+            display: block;
+            max-width: 496px;
+            margin: 0 auto 48px;
+        }
     }
-}
+        
+    @media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+        .title-section {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office@2x.jpg);
+        }
+    }
 
 /* =============benefits================= */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
+
 .benefits {
     padding-top: 96px;
     padding-bottom: 96px;
@@ -283,10 +307,13 @@ ul, ol {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+   
 }
 .container-list-item {
-    
+    display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
     gap: 72px;
 }
 .icon-b {
@@ -297,11 +324,9 @@ ul, ol {
         text-align: none;
     }
     .icon-b {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
+        display: none;
     }
+    
 }
   
 @media screen and (min-width: 1158px) {
