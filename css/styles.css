@@ -310,6 +310,129 @@ fill: #ffffff;
     box-shadow: 0 4px 4px 0 rgba(0,0,0,0.15);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+/* ====modal-mobile========== */
+.modal-overlay-mob {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 999999;
+    background-color: rgba(46, 47, 66, 0.4);
+    opacity: 0; 
+    visibility: hidden;
+    position: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.container-modal-mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #fcfcfc;
+    border-radius: 4px;
+    padding: 72px 24px 40px 16px;
+    width: 320px;
+    height: 100%;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #e7e9fc;
+}
+
+.modal-btn:hover > .modal-btn-svg,
+.modal-btn:focus > .modal-btn-svg{
+fill: #ffffff;
+}
+.modal-btn-svg {
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navigation-mobile { 
+    margin-bottom: auto;
+}
+.nav-list-mob{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 40px;
+    width: 151px;
+    height: 200px;
+}
+.nav-link-mobile {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    position: relative;
+}
+.studio-mobile{
+    color: #404bbf;
+    margin-bottom: 40px;
+}
+
+.address-list-mob {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+    width: 193px;
+    height: 72px;
+    margin-bottom: 48px;
+}
+.address-list-item-mob{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+.mobile-numb{
+    color: #4d5ae5;
+}
+.media-list-avatar-mob{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 40px;
+}
+.media-list-item-t{
+    width: 40px;
+    height: 40px;
+}
+
+@media screen and (min-width: 768px){
+    .modal-overlay-mob{
+        display: none;
+    }
+}
+
+
 @media screen and (min-width: 768px) {
     .btn-burger {
         display: none;
@@ -385,6 +508,10 @@ fill: #ffffff;
     .form {
     width: 360px;
 }
+.modal-overlay-mob{
+    display: none;
+}
+
 }
 
 @media screen and (min-width: 1158px) {
@@ -401,8 +528,6 @@ fill: #ffffff;
         line-height: 1.5;
         letter-spacing: 0.02em;    
 }
-
-
 }
 
 
@@ -1026,7 +1151,7 @@ form-container{
  
 @media screen and (min-width: 1158px){
     .section-footer {
-        max-width: 100%;
+        max-width: 1440px;
         min-height: 312px;
         padding: 100px 0;
         margin-left: auto;
@@ -1058,128 +1183,6 @@ form-container{
  
 
  
-}
-
-/* ====modal-mobile========== */
-.modal-overlay-mob {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    z-index: 999999;
-    background-color: rgba(46, 47, 66, 0.4);
-    opacity: 0; 
-    visibility: hidden;
-    position: none;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.is-open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-}
-.container-modal-mobile {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background: #fcfcfc;
-    border-radius: 4px;
-    padding: 72px 24px 40px 16px;
-    width: 320px;
-    height: 100%;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    padding: 0;
-    cursor: pointer;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: #e7e9fc;
-}
-
-.modal-btn:hover > .modal-btn-svg,
-.modal-btn:focus > .modal-btn-svg{
-fill: #ffffff;
-}
-.modal-btn-svg {
-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.navigation-mobile { 
-    margin-bottom: auto;
-}
-.nav-list-mob{
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    gap: 40px;
-    width: 151px;
-    height: 200px;
-}
-.nav-link-mobile {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
-    position: relative;
-}
-.studio-mobile{
-    color: #404bbf;
-    margin-bottom: 40px;
-}
-
-.address-list-mob {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 24px;
-    width: 193px;
-    height: 72px;
-    margin-bottom: 48px;
-}
-.address-list-item-mob{
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: #434455;
-}
-.mobile-numb{
-    color: #4d5ae5;
-}
-.media-list-avatar-mob{
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: row;
-    gap: 40px;
-}
-.media-list-item-t{
-    width: 40px;
-    height: 40px;
-}
-
-@media screen and (min-width: 768px){
-    .modal-overlay-mob{
-        display: none;
-    }
 }
 
 
